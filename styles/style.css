@@ -1,0 +1,358 @@
+  /* رنگ‌های برند */
+  :root {
+    --brand: #0f1b34;
+    /* اصلی */
+    --accent: #ff5c19;
+    /* اصلی دوم */
+    --muted: #767171;
+    /* فرعی */
+    --tint: #c2d8ed;
+    /* فرعی روشن */
+    --bg: var(--brand);
+    --fg: #eaf0f7;
+    --surface: #132140;
+    --border: #1e2b4a;
+    --shadow: rgba(0, 0, 0, .25);
+    --radius: 14px;
+    --maxw: 640px;
+  }
+
+  * {
+    box-sizing: border-box
+  }
+
+  html,
+  body {
+    margin: 0;
+    height: 100%
+  }
+
+  body {
+    font-family: 'Vazirmatn', Roboto, system-ui, -apple-system, Segoe UI, 'Noto Naskh Arabic', sans-serif;
+    background: radial-gradient(circle, rgba(11, 31, 58, 1) 25%, rgba(12, 15, 30, 1) 100%);
+    color: var(--fg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 32px 18px 48px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 8px 0 14px;
+  }
+
+  .logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--accent), #ff7f4c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    font-weight: 800;
+    font-size: 26px;
+    box-shadow: 0 10px 30px rgba(255, 92, 25, .25);
+    user-select: none;
+  }
+
+  .brand {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand .name {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: .2px
+  }
+
+  .brand .sub {
+    font-size: 13px;
+    color: var(--tint)
+  }
+
+  .intro {
+    margin: 4px 0 18px;
+    color: var(--tint);
+    line-height: 1.85;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, .02);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    backdrop-filter: saturate(120%) blur(6px);
+    box-shadow: 0 8px 24px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 640px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 16px;
+    margin: 10px 0;
+    background: var(--surface);
+    color: var(--fg);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: transform .08s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    will-change: transform;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    background: #192a53;
+    border-color: #27407a;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .25)
+  }
+
+  .btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px
+  }
+
+  .btn .icon {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .06);
+    font-size: 16px;
+  }
+
+  .btn .txt {
+    display: flex;
+    flex-direction: column
+  }
+
+  .btn .ttl {
+    font-weight: 700
+  }
+
+  .btn .sub {
+    color: var(--tint);
+    font-size: 12px
+  }
+
+  /* رنگ برند هر شبکه */
+  .yt {
+    border-color: #b62d2d;
+  }
+
+  .yt .icon {
+    background: #ff4d4d20
+  }
+
+  .yt:hover {
+    background: #261b1b;
+    border-color: #ff5252
+  }
+
+  .ig {
+    border-color: #b24bb8
+  }
+
+  .ig .icon {
+    background: #ff5cb120
+  }
+
+  .ig:hover {
+    background: #2a1d2b;
+    border-color: #ff79c6
+  }
+
+  .tg {
+    border-color: #2a74a4
+  }
+
+  .tg .icon {
+    background: #2aa1ff20
+  }
+
+  .tg:hover {
+    background: #1b2734;
+    border-color: #69c0ff
+  }
+
+  .cta {
+    margin: 16px 0 6px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    background: linear-gradient(135deg, var(--accent), #ff7f4c);
+    color: #161616;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 10px 22px rgba(255, 92, 25, .25);
+    transition: transform .08s ease;
+  }
+
+  .chip:hover {
+    transform: translateY(-2px)
+  }
+
+  .others {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 50px 0 0 0;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    backdrop-filter: saturate(20%) blur(6px);
+    opacity: 0.7;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 24px var(--shadow);
+    gap: 50px;
+    width: 100vw;
+
+  }
+
+  .others img {
+    padding: 15px 2px 15px 2px;
+  }
+
+  .promote {
+    display: flex;
+    justify-content: center;
+    font-size: 22pt;
+  }
+
+  .promote span {
+    color: var(--accent);
+    font-family: 'Vazirmatn';
+    font-weight: bold;
+  }
+
+  footer {
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--muted);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-top: 1px dashed #223458;
+  }
+
+  .sep {
+    opacity: .35;
+    margin: 0 6px
+  }
+
+  /* حالت روشن سیستم */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --fg: #0f1b34;
+      --bg: #f5f8fd;
+      --surface: #ffffff;
+      --border: #d9e2f2;
+      --shadow: rgba(16, 24, 48, .08);
+    }
+
+    body {
+      background: radial-gradient(900px 600px at 15% -10%, #c2d8ed 0%, #eef4fb 55%) no-repeat, #eef4fb
+    }
+
+    .btn:hover {
+      background: #f5f8ff;
+      border-color: #c8d8f0;
+      box-shadow: 0 10px 22px rgba(18, 33, 64, .06)
+    }
+
+    footer {
+      border-color: #d9e2f2
+    }
+
+    #main-logo {
+      content: url('../assets/images/main_logo.png');
+    }
+
+    #edu-logo {
+      content: url('../assets/images/eduMind_light.png');
+    }
+
+    #pro-logo {
+      content: url('../assets/images/proMind_light.png');
+    }
+
+    #news-logo {
+      content: url('../assets/images/newsMind_light.png');
+    }
+
+    .intro {
+      color: #0c0f1e;
+    }
+
+    .others {
+      background: radial-gradient(circle, rgba(11, 31, 58, 1) 25%, rgba(12, 15, 30, 1) 100%);
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .promote {
+      font-size: 18px;
+    }
+
+    #int-txt {
+      font-size: 14px;
+    }
+
+    .others {
+      gap: 10px;
+      width: 100vw;
+    }
+
+    #edu-logo,
+    #pro-logo {
+      width: 90px;
+    }
+
+    #news-logo {
+      width: 110px;
+    }
+
+    .card {
+      width: 100vw;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+  }
