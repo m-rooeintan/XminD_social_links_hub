@@ -21,36 +21,6 @@
   gtag('js', new Date());
   gtag('config', 'G-NZ14N1KFZD');
 </script>
-  <script defer>
-  document.addEventListener("DOMContentLoaded", function() {
-    // همه لینک‌های صفحه
-    const links = document.querySelectorAll("a[href]");
-
-    links.forEach(link => {
-      
-      if (link.hostname !== window.location.hostname) {
-        link.addEventListener("click", function(e) {
-          const url = link.href;
-
-          // ----- ارسال به Google Analytics -----
-          if (typeof gtag === "function") {
-            gtag('event', 'outbound_click', {
-              'event_category': 'outbound',
-              'event_label': url,
-              'transport_type': 'beacon'
-            });
-          }
-
-          // ----- ارسال به Umami -----
-          if (typeof umami === "object" && typeof umami.track === "function") {
-    
-            umami.track('outbound_click', { url: url });
-          }
-        });
-      }
-    });
-  });
-</script>
 
 </head>
 
@@ -71,7 +41,7 @@
     <div class="card" role="navigation" aria-label="لینک‌های شبکه‌های اجتماعی">
       <!-- یوتیوب -->
       <a class="btn yt" href="https://youtube.com/@x_mindworld?utm_source=qr&utm_medium=offline&utm_campaign=linkhub"
-        target="_blank" rel="noopener">
+        target="_blank" rel="noopener" data-umami-event="Click: YouTube">
         <span class="icon" aria-hidden="true"><img src="assets/svg/youtube-color-svgrepo-com.svg" alt="youtube icon"
             width="20px"></span>
         <span class="txt">
@@ -81,7 +51,7 @@
 
       <!-- اینستاگرام -->
       <a class="btn ig" href="https://instagram.com/x_mindworld?utm_source=qr&utm_medium=offline&utm_campaign=linkhub"
-        target="_blank" rel="noopener">
+        target="_blank" rel="noopener" data-umami-event="Click: Instagram">
         <span class="icon" aria-hidden="true"><img src="assets/svg/instagram-1-svgrepo-com.svg" alt="instagram icon"
             width="20px"></span>
         <span class="txt">
@@ -90,7 +60,7 @@
       </a>
 
       <!-- تلگرام -->
-      <a class="btn tg" href="https://t.me/x_mindworld?utm_source=qr&utm_medium=offline&utm_campaign=linkhub" target="_blank" rel="noopener">
+      <a class="btn tg" href="https://t.me/x_mindworld?utm_source=qr&utm_medium=offline&utm_campaign=linkhub" target="_blank" rel="noopener" data-umami-event="Click: Telegram">
         <span class="icon" aria-hidden="true"><img src="assets/svg/telegram-svgrepo-com.svg" alt="telegram icon"
             width="20px"></span>
         <span class="txt">
