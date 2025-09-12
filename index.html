@@ -21,6 +21,37 @@
   gtag('js', new Date());
   gtag('config', 'G-NZ14N1KFZD');
 </script>
+  <script defer>
+  document.addEventListener("DOMContentLoaded", function() {
+    // همه لینک‌های صفحه
+    const links = document.querySelectorAll("a[href]");
+
+    links.forEach(link => {
+      
+      if (link.hostname !== window.location.hostname) {
+        link.addEventListener("click", function(e) {
+          const url = link.href;
+
+          // ----- ارسال به Google Analytics -----
+          if (typeof gtag === "function") {
+            gtag('event', 'outbound_click', {
+              'event_category': 'outbound',
+              'event_label': url,
+              'transport_type': 'beacon'
+            });
+          }
+
+          // ----- ارسال به Umami -----
+          if (typeof umami === "object" && typeof umami.track === "function") {
+    
+            umami.track('outbound_click', { url: url });
+          }
+        });
+      }
+    });
+  });
+</script>
+
 </head>
 
 <body>
