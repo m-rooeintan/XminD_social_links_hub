@@ -202,6 +202,19 @@
     border-color: #69c0ff
   }
 
+.dc {
+    border-color: #5865F2;
+  }
+
+  .dc .icon {
+    background: #5865F220
+  }
+
+  .dc:hover {
+    background: #23272A;
+    border-color: #404EED;
+  }
+
   .cta {
     margin: 16px 0 6px;
     display: flex;
