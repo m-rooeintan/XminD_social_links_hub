@@ -203,16 +203,16 @@
   }
 
 .dc {
-    border-color: #5865F2;
+    border-color: #5865F2
   }
 
-  .dc .icon {
-    background: #5865F220;
+.dc .icon {
+    background: #5865F220
   }
 
-  .dc:hover {
+.dc:hover {
     background: #23272A;
-    border-color: #404EED;
+    border-color: #404EED
   }
 
   .cta {
