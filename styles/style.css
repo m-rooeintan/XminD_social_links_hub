@@ -215,6 +215,20 @@
     border-color: #404EED
   }
 
+.gh {
+  border-color: #24292e;
+}
+
+.gh .icon {
+  background: #24292e20; 
+}
+
+.gh:hover {
+  background: #2f363d;
+  border-color: #ffffff;
+}
+
+
   .cta {
     margin: 16px 0 6px;
     display: flex;
