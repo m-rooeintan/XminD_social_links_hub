@@ -216,17 +216,18 @@
   }
 
 .gh {
-  border-color: #24292e;
+  border-color: #d0d7de;
 }
 
 .gh .icon {
-  background: #24292e20; 
+  background: #d0d7de20;
 }
 
 .gh:hover {
-  background: #2f363d;
-  border-color: #ffffff;
+  background: #f6f8fa;
+  border-color: #24292e;
 }
+
 
 
   .cta {
